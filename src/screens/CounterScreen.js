@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
 const CounterScreen = () => {
   const [counter, setCounter] = useState(0);
@@ -9,9 +9,6 @@ const CounterScreen = () => {
       <Button
         title="Increase"
         onPress={() => {
-          // Don't do this!
-          // counter++;
-          // counter = counter + 1;
           setCounter(counter + 1);
         }}
       />
@@ -25,7 +22,5 @@ const CounterScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default CounterScreen;

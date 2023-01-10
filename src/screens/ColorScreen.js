@@ -18,9 +18,7 @@ const ColorScreen = () => {
         keyExtractor={item => item}
         data={colors}
         renderItem={({item}) => {
-          return (
-            <View style={{height: 100, width: 100, backgroundColor: item}} />
-          );
+          return <View style={styles.FlatlistStyle} />;
         }}
       />
     </View>
@@ -35,6 +33,11 @@ const randomRgb = () => {
   return `rgb(${red}, ${green}, ${blue})`;
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  FlatlistStyle: {
+    height: 100,
+    width: 100,
+  },
+});
 
 export default ColorScreen;
