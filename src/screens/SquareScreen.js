@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import ColorCounter from '../components/ColorCounter';
 
 const COLOR_INCREMENT = 10;
@@ -49,6 +49,7 @@ const SquareScreen = () => {
         color="Green"
       />
       <View
+        // eslint-disable-next-line react-native/no-inline-styles
         style={{
           height: 150,
           width: 150,
@@ -58,7 +59,5 @@ const SquareScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default SquareScreen;
