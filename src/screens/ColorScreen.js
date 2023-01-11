@@ -9,16 +9,16 @@ const ColorScreen = () => {
     <View>
       <Button
         title="Add a Color"
-        onPress={() => {
-          setColors([...colors, randomRgb()]);
-        }}
+        onPress={() => setColors([...colors, randomRgb()])}
       />
 
       <FlatList
         keyExtractor={item => item}
         data={colors}
         renderItem={({item}) => {
-          return <View style={styles.FlatlistStyle} />;
+          return (
+            <View style={{height: 100, width: 100, backgroundColor: item}} />
+          );
         }}
       />
     </View>
@@ -33,11 +33,6 @@ const randomRgb = () => {
   return `rgb(${red}, ${green}, ${blue})`;
 };
 
-const styles = StyleSheet.create({
-  FlatlistStyle: {
-    height: 100,
-    width: 100,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default ColorScreen;
