@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import ColorCounter from '../components/ColorCounter';
 
 const COLOR_INCREMENT = 10;
@@ -10,7 +10,6 @@ const SquareScreen = () => {
   const [green, setGreen] = useState(0);
 
   const setColor = (color, change) => {
-    console.log(red);
     switch (color) {
       case 'Red':
         if (!(red + change > 255 || red + change < 0)) {
